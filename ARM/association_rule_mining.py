@@ -93,7 +93,6 @@ rules = association_rules(freq_items, metric="confidence", min_threshold=0.6)
 #Prior: 0.4380952380952381
 #Gain in Confidence: 52.17391304347825
 #-->add your python code below
-print(valCount)
 for index,row in rules.iterrows():
     #print(str(row['antecedents']) + " -> " + str(row['consequents']))
     suportCount = 0
@@ -125,10 +124,10 @@ for index,row in rules.iterrows():
     print("Confidence: " + str(row['confidence'])) #confidence
 #To calculate the prior and gain in confidence, find in how many transactions the consequent of the rule appears (the supporCount below). Then,
 #use the gain formula provided right after.
+#-->add your python code below
     prior = suportCount/len(encoded_vals) #-> encoded_vals is the number of transactions
     print("Prior: " + str(prior))
     print("Gain in Confidence: " + str(100*(row['confidence']-prior)/prior))
-#-->add your python code below
     print()
 
 #Finally, plot support x confidence

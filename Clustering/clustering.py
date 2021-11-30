@@ -18,12 +18,13 @@ from sklearn import metrics
 df = pd.read_csv('training_data.csv', sep=',', header=None) #reading the data by using Pandas library
 
 #assign your training data to X_training feature matrix
-X_training = df
+
 #print(X_training)
 #run kmeans testing different k values from 2 until 20 clusters
      #Use:  kmeans = KMeans(n_clusters=k, random_state=0)
      #      kmeans.fit(X_training)
      #--> add your Python code
+X_training = df
 highscore = 0
 highK = 0
 sill = []
